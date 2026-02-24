@@ -10,11 +10,7 @@
 body { font-family:'Open Sans',sans-serif; font-weight:300; color:#222; background:#fff; line-height:1.7; }
 
 /* NAV */
-nav {
-  background:#1a2744; padding:18px 8%;
-  display:flex; justify-content:space-between; align-items:center;
-  position:sticky; top:0; z-index:100;
-}
+nav { background:#1a2744; padding:18px 8%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100; }
 .nav-brand { font-family:'Merriweather',serif; color:#fff; font-size:18px; font-weight:400; }
 .nav-links { display:flex; gap:28px; list-style:none; }
 .nav-links a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:13px; letter-spacing:0.06em; transition:color 0.2s; }
@@ -23,12 +19,7 @@ nav {
 
 /* HERO */
 .hero { background:#1a2744; color:#fff; padding:80px 8%; display:flex; align-items:center; gap:60px; }
-.hero-photo {
-  width:160px; height:190px; flex-shrink:0;
-  background:#243460; border:2px solid #c8a84b;
-  display:flex; align-items:center; justify-content:center;
-  font-family:'Merriweather',serif; font-size:38px; color:#c8a84b; overflow:hidden;
-}
+.hero-photo { width:160px; height:190px; flex-shrink:0; background:#243460; border:2px solid #c8a84b; display:flex; align-items:center; justify-content:center; font-family:'Merriweather',serif; font-size:38px; color:#c8a84b; overflow:hidden; }
 .hero-photo img { width:100%; height:100%; object-fit:cover; object-position:top; }
 .hero-label { font-size:11px; color:#c8a84b; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; margin-bottom:12px; }
 .hero-name { font-family:'Merriweather',serif; font-size:40px; font-weight:300; margin-bottom:18px; }
@@ -67,16 +58,14 @@ section:nth-child(even) { background:#f7f9fc; }
 .skill-tag { padding:10px 20px; background:#fff; border:1px solid #d0d8e8; color:#333; font-size:13px; font-weight:400; transition:all 0.2s; }
 .skill-tag:hover { border-color:#c8a84b; color:#1a2744; background:#fdf8ee; }
 
-/* ── BLOG SECTION ── */
+/* BLOG */
 #insights { background:#f7f9fc; }
-
-.blog-filter { display:flex; gap:0; flex-wrap:wrap; margin-bottom:32px; border-bottom:1px solid #e0e8f0; }
+.blog-filter { display:flex; flex-wrap:wrap; margin-bottom:32px; border-bottom:1px solid #e0e8f0; }
 .bf-btn { padding:12px 20px; border:none; background:none; font-family:'Open Sans',sans-serif; font-size:13px; color:#888; cursor:pointer; border-bottom:2px solid transparent; transition:color 0.2s,border-color 0.2s; white-space:nowrap; }
 .bf-btn:hover { color:#1a2744; }
 .bf-btn.active { color:#1a2744; border-bottom-color:#1a2744; font-weight:600; }
 
-.blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:20px; }
-
+.blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
 .blog-card { background:#fff; border:1px solid #e0e8f0; border-left:3px solid #1a2744; padding:24px; cursor:pointer; transition:box-shadow 0.2s,transform 0.2s; }
 .blog-card:hover { box-shadow:0 4px 20px rgba(26,39,68,0.1); transform:translateY(-2px); }
 .bc-top { display:flex; align-items:center; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
@@ -93,7 +82,6 @@ section:nth-child(even) { background:#f7f9fc; }
 .bc-readmore { font-size:13px; font-weight:600; color:#1a2744; }
 .bc-del { background:none; border:none; color:#ddd; cursor:pointer; font-size:14px; padding:4px 6px; transition:color 0.2s; }
 .bc-del:hover { color:#c0392b; }
-
 .blog-empty { grid-column:1/-1; text-align:center; padding:60px 20px; }
 .blog-empty h3 { font-family:'Merriweather',serif; font-size:20px; color:#ccc; margin-bottom:10px; }
 .blog-empty p { font-size:14px; color:#bbb; }
@@ -111,11 +99,10 @@ section:nth-child(even) { background:#f7f9fc; }
 .form-btn { padding:13px 32px; background:#1a2744; color:#fff; border:none; font-family:'Open Sans',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; transition:background 0.2s; }
 .form-btn:hover { background:#c8a84b; color:#1a2744; }
 
-/* FOOTER */
 footer { background:#1a2744; color:rgba(255,255,255,0.5); text-align:center; padding:24px 8%; font-size:13px; }
 footer span { color:rgba(255,255,255,0.8); }
 
-/* ADMIN BUTTON */
+/* ADMIN FAB */
 .admin-fab { position:fixed; bottom:28px; right:28px; background:#1a2744; color:#c8a84b; border:none; width:52px; height:52px; border-radius:50%; font-size:22px; cursor:pointer; box-shadow:0 4px 18px rgba(26,39,68,0.45); z-index:300; display:flex; align-items:center; justify-content:center; transition:background 0.2s,transform 0.2s; }
 .admin-fab:hover { background:#243460; transform:scale(1.08); }
 
@@ -140,7 +127,6 @@ footer span { color:rgba(255,255,255,0.8); }
 .btn-pub { width:100%; padding:13px; background:#1a2744; color:#fff; border:none; font-family:'Open Sans',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.08em; cursor:pointer; transition:background 0.2s; margin-top:6px; }
 .btn-pub:hover { background:#c8a84b; color:#1a2744; }
 
-/* POST READ OVERLAY */
 .post-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:500; overflow-y:auto; padding:24px; }
 .post-overlay.open { display:block; }
 .post-modal { background:#fff; max-width:700px; margin:40px auto; padding:48px; position:relative; }
@@ -151,7 +137,7 @@ footer span { color:rgba(255,255,255,0.8); }
 .p-meta { font-size:13px; color:#999; margin-bottom:28px; padding-bottom:20px; border-bottom:1px solid #e0e8f0; }
 .p-body { font-size:15px; color:#444; line-height:1.9; white-space:pre-wrap; }
 
-@media(max-width:768px) {
+@media(max-width:768px){
   .nav-links { display:none; }
   .hero { flex-direction:column; padding:50px 5%; gap:28px; text-align:center; }
   .hero-stats { justify-content:center; }
@@ -168,7 +154,6 @@ footer span { color:rgba(255,255,255,0.8); }
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-brand">Souvik Das</div>
   <ul class="nav-links">
@@ -181,10 +166,9 @@ footer span { color:rgba(255,255,255,0.8); }
 </nav>
 <div class="gold-bar"></div>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-photo" id="heroPhoto">
-    <img src="profile.jpg" alt="Souvik Das" onerror="this.style.display='none';document.getElementById('heroPhoto').textContent='SD'">
+    <img src="./profile.jpg" alt="Souvik Das" onerror="this.style.display='none';document.getElementById('heroPhoto').textContent='SD'">
   </div>
   <div>
     <div class="hero-label">Finance Professional · Kolkata, India</div>
@@ -200,7 +184,6 @@ footer span { color:rgba(255,255,255,0.8); }
 </div>
 <div class="gold-bar"></div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-label">Background</div>
   <h2 class="section-title">About Me</h2>
@@ -216,7 +199,6 @@ footer span { color:rgba(255,255,255,0.8); }
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">Career</div>
   <h2 class="section-title">Experience</h2>
@@ -257,7 +239,6 @@ footer span { color:rgba(255,255,255,0.8); }
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-label">Expertise</div>
   <h2 class="section-title">Core Skills</h2>
@@ -275,7 +256,6 @@ footer span { color:rgba(255,255,255,0.8); }
   </div>
 </section>
 
-<!-- INSIGHTS / BLOG -->
 <section id="insights">
   <div class="section-label">Thought Leadership</div>
   <h2 class="section-title">Financial Insights</h2>
@@ -290,14 +270,13 @@ footer span { color:rgba(255,255,255,0.8); }
   <div class="blog-grid" id="blogGrid"></div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-label">Get In Touch</div>
   <h2 class="section-title">Contact</h2>
   <div class="contact-grid">
     <div class="contact-info">
       <p>Feel free to reach out for professional inquiries, financial advisory discussions, or simply to connect.</p>
-      <a href="mailto:souvik.das39@yahoo.com" class="citem"><div class="cicon">✉</div>souvik.das39@yahoo.com</a>
+      <a href="/cdn-cgi/l/email-protection#d2a1bda7a4bbb9fcb6b3a1e1eb92abb3babdbdfcb1bdbf" class="citem"><div class="cicon">✉</div><span class="__cf_email__" data-cfemail="bccfd3c9cad5d792d8ddcf8f85fcc5ddd4d3d392dfd3d1">[email&#160;protected]</span></a>
       <div class="citem"><div class="cicon">📍</div>Kolkata, West Bengal, India</div>
       <a href="https://www.linkedin.com/in/souvik-das-14a22b224" target="_blank" class="citem"><div class="cicon">in</div>LinkedIn Profile</a>
     </div>
@@ -312,7 +291,6 @@ footer span { color:rgba(255,255,255,0.8); }
 
 <footer>© 2026 <span>Souvik Das</span> · Finance Professional · Kolkata · souvik-advisory.netlify.app</footer>
 
-<!-- ADMIN BUTTON -->
 <button class="admin-fab" onclick="openAdmin()" title="Write Article">✎</button>
 
 <!-- ADMIN OVERLAY -->
@@ -356,4 +334,7 @@ footer span { color:rgba(255,255,255,0.8); }
         </div>
         <div class="field">
           <label>Short Summary *</label>
-          <textarea id="fExcerpt" rows="3" placeholder="2–3 sentence summary shown on the listin
+          <textarea id="fExcerpt" rows="3" placeholder="2–3 sentence summary shown on the listing…"></textarea>
+        </div>
+        <div class="field">
+          <label>Fu
