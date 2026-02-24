@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights | Souvik Das</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+body{font-family:'Open Sans',sans-serif;font-weight:300;color:#222;background:#f7f9fc;line-height:1.7;}
+
+nav{background:#1a2744;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:200;}
+.nav-brand{font-family:'Merriweather',serif;color:#fff;font-size:18px;font-weight:400;text-decoration:none;}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+
+.blog-header{background:linear-gradient(135deg,#1a2744 0%,#243460 100%);color:#fff;padding:60px 6% 50px;}
+.blog-header .eyebrow{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:#a8c4e0;margin-bottom:12px;}
+.blog-header h1{font-family:'Merriweather',serif;font-size:34px;font-weight:700;margin-bottom:10px;}
+.blog-header p{font-size:14px;color:rgba(255,255,255,0.65);max-width:500px;}
+
+.filter-bar{background:#fff;border-bottom:1px solid #e0e8f0;padding:0 6%;display:flex;overflow-x:auto;}
+.filter-btn{padding:15px 20px;border:none;background:none;font-family:'Open Sans',sans-serif;font-size:13px;color:#777;cursor:pointer;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;white-space:nowrap;}
+.filter-btn:hover{color:#1a2744;}
+.filter-btn.active{color:#1a2744;border-bottom-color:#1a2744;font-weight:600;}
+
+.main{max-width:820px;margin:0 auto;padding:40px 5%;}
+.blog-grid{display:flex;flex-direction:column;gap:20px;}
+
+.blog-card{background:#fff;border:1px solid #e0e8f0;border-left:3px solid #1a2744;padding:28px;cursor:pointer;transition:box-shadow 0.2s,transform 0.2s;}
+.blog-card:hover{box-shadow:0 4px 20px rgba(26,39,68,0.1);transform:translateY(-2px);}
+.card-top{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+
+.ctag{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;}
+.ct-Banking{background:#e8f0fb;color:#1a2744;}
+.ct-Economics{background:#e8f5ee;color:#1a6632;}
+.ct-Investment{background:#fdf3e3;color:#8a4f00;}
+.ct-Insurance{background:#f3e8fb;color:#5a1a7a;}
+.ct-Finance{background:#fbe8e8;color:#7a1a1a;}
+
+.card-meta{font-size:12px;color:#999;margin-left:auto;display:flex;gap:12px;}
+.card-title{font-family:'Merriweather',serif;font-size:19px;font-weight:700;color:#1a2744;margin-bottom:8px;line-height:1.35;}
+.card-excerpt{font-size:14px;color:#666;line-height:1.75;margin-bottom:16px;}
+.card-footer{display:flex;justify-content:space-between;align-items:center;}
+.read-more{font-size:13px;font-weight:600;color:#1a2744;}
+.del-btn{background:none;border:none;color:#ddd;cursor:pointer;font-size:15px;transition:color 0.2s;padding:4px 8px;}
+.del-btn:hover{color:#c0392b;}
+
+.empty-state{text-align:center;padding:80px 20px;}
+.empty-state h3{font-family:'Merriweather',serif;font-size:20px;color:#ccc;margin-bottom:10px;}
+.empty-state p{font-size:14px;color:#bbb;}
+
+.admin-btn{position:fixed;bottom:28px;right:28px;background:#1a2744;color:#fff;border:none;width:52px;height:52px;border-radius:50%;font-size:22px;cursor:pointer;box-shadow:0 4px 18px rgba(26,39,68,0.4);z-index:300;display:flex;align-items:center;justify-content:center;transition:background 0.2s,transform 0.2s;}
+.admin-btn:hover{background:#243460;transform:scale(1.08);}
+
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:400;align-items:center;justify-content:center;padding:20px;}
+.overlay.open{display:flex;}
+
+.modal{background:#fff;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;border-top:4px solid #1a2744;}
+.modal-header{padding:24px 28px 18px;border-bottom:1px solid #e0e8f0;display:flex;justify-content:space-between;align-items:center;}
+.modal-header h2{font-family:'Merriweather',serif;font-size:18px;color:#1a2744;}
+.mclose{background:none;border:none;font-size:26px;color:#aaa;cursor:pointer;line-height:1;}
+.mclose:hover{color:#333;}
+.modal-body{padding:24px 28px;}
+
+.screen{display:none;}
+.screen.active{display:block;}
+
+.pwd-info{font-size:14px;color:#666;margin-bottom:20px;text-align:center;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#1a2744;margin-bottom:5px;}
+.field input,.field select,.field textarea{width:100%;padding:11px 14px;border:1px solid #dce6f0;font-family:'Open Sans',sans-serif;font-size:14px;color:#333;outline:none;transition:border-color 0.2s;resize:vertical;background:#fff;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#1a2744;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.errmsg{font-size:13px;color:#c0392b;margin-bottom:12px;text-align:center;display:none;}
+.btn-main{width:100%;padding:13px;background:#1a2744;color:#fff;border:none;font-family:'Open Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;cursor:pointer;transition:background 0.2s;margin-top:6px;}
+.btn-main:hover{background:#243460;}
+
+.post-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:500;overflow-y:auto;padding:24px;}
+.post-overlay.open{display:block;}
+.post-modal{background:#fff;max-width:700px;margin:40px auto;padding:48px;position:relative;}
+.pclose{position:absolute;top:16px;right:20px;background:none;border:none;font-size:26px;color:#aaa;cursor:pointer;}
+.pclose:hover{color:#333;}
+.post-cat-wrap{margin-bottom:18px;}
+.post-title{font-family:'Merriweather',serif;font-size:26px;color:#1a2744;line-height:1.3;margin-bottom:12px;}
+.post-meta-bar{font-size:13px;color:#999;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid #e0e8f0;}
+.post-body{font-size:15px;color:#444;line-height:1.9;white-space:pre-wrap;}
+
+@media(max-width:700px){
+  .nav-links{display:none;}
+  .two-col{grid-template-columns:1fr;}
+  .post-modal{padding:28px 18px;margin:20px auto;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Souvik Das</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="blog.html" class="active">Insights</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="blog-header">
+  <div class="eyebrow">Thought Leadership</div>
+  <h1>Financial Insights</h1>
+  <p>Articles on macroeconomics, banking, investment strategy, and financial independence — by Souvik Das.</p>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="setFilter('All',this)">All</button>
+  <button class="filter-btn" onclick="setFilter('Banking',this)">Banking</button>
+  <button class="filter-btn" onclick="setFilter('Economics',this)">Economics</button>
+  <button class="filter-btn" onclick="setFilter('Investment',this)">Investment</button>
+  <button class="filter-btn" onclick="setFilter('Insurance',this)">Insurance</button>
+  <button class="filter-btn" onclick="setFilter('Finance',this)">Finance</button>
+</div>
+
+<div class="main">
+  <div class="blog-grid" id="blogGrid"></div>
+</div>
+
+<button class="admin-btn" onclick="openAdmin()" title="Write Article">✎</button>
+
+<!-- ADMIN OVERLAY -->
+<div class="overlay" id="adminOverlay">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h2 id="mTitle">Admin Login</h2>
+      <button class="mclose" onclick="closeAdmin()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="screen active" id="pwdScreen">
+        <p class="pwd-info">Enter your admin password to publish articles.</p>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="pwdInput" placeholder="Enter password" onkeydown="if(event.key==='Enter')checkPwd()">
+        </div>
+        <p class="errmsg" id="pwdError">Incorrect password. Please try again.</p>
+        <button class="btn-main" onclick="checkPwd()">Unlock →</button>
+      </div>
+      <div class="screen" id="formScreen">
+        <div class="field">
+          <label>Article Title *</label>
+          <input type="text" id="fTitle" placeholder="e.g. How RBI Rate Cuts Affect Your Savings">
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label>Category *</label>
+            <select id="fCat">
+              <option value="">Select…</option>
+              <option>Banking</option>
+              <option>Economics</option>
+              <option>Investment</option>
+              <option>Insurance</option>
+              <option>Finance</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Reading Time (min) *</label>
+            <input type="number" id="fRT" placeholder="5" min="1" max="60">
+          </div>
+        </div>
+        <div class="field">
+          <label>Short Summary *</label>
+          <textarea id="fExcerpt" rows="3" placeholder="2-3 sentence summary shown on the listing page…"></textarea>
+        </div>
+        <div class="field">
+          <label>Full Article *</label>
+          <textarea id="fContent" rows="10" placeholder="Write your full article here…"></textarea>
+        </div>
+        <p class="errmsg" id="formError">Please fill in all fields before publishing.</p>
+        <button class="btn-main" onclick="publishPost()">Publish Article →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POST READ OVERLAY -->
+<div class="post-overlay" id="postOverlay" onclick="closePost()">
+  <div class="post-modal" onclick="event.stopPropagation()">
+    <button class="pclose" onclick="closePost()">×</button>
+    <div class="post-cat-wrap" id="pCat"></div>
+    <div class="post-title" id="pTitle"></div>
+    <div class="post-meta-bar" id="pMeta"></div>
+    <div class="post-body" id="pBody"></div>
+  </div>
+</div>
+
+<script>
+var PASS = 'souvik2026';
+var KEY  = 'sd_blog_posts';
+var posts = [];
+var filter = 'All';
+var unlocked = false;
+
+// Load from localStorage
+function load() {
+  try { var r = localStorage.getItem(KEY); posts = r ? JSON.parse(r) : []; }
+  catch(e) { posts = []; }
+}
+
+// Save to localStorage
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(posts)); } catch(e) {}
+}
+
+// Escape HTML
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// Format date
+function fmt(iso) {
+  try { return new Date(iso).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}); }
+  catch(e) { return ''; }
+}
+
+// Render blog cards
+function render() {
+  var g = document.getElementById('blogGrid');
+  var list = filter === 'All' ? posts : posts.filter(function(p){ return p.cat === filter; });
+  if (!list.length) {
+    g.innerHTML = '<div class="empty-state"><h3>' +
+      (filter==='All' ? 'No articles yet' : 'No '+filter+' articles yet') +
+      '</h3><p>' +
+      (filter==='All' ? 'Click the ✎ button at the bottom right to write your first article.' : 'Switch to All or publish a new article in this category.') +
+      '</p></div>';
+    return;
+  }
+  g.innerHTML = list.map(function(p) {
+    return '<div class="blog-card" onclick="openPost('+p.id+')">' +
+      '<div class="card-top">' +
+        '<span class="ctag ct-'+esc(p.cat)+'">'+esc(p.cat)+'</span>' +
+        '<div class="card-meta"><span>⏱ '+p.rt+' min</span><span>'+fmt(p.date)+'</span></div>' +
+        '<button class="del-btn" onclick="event.stopPropagation();delPost('+p.id+')" title="Delete">✕</button>' +
+      '</div>' +
+      '<div class="card-title">'+esc(p.title)+'</div>' +
+      '<div class="card-excerpt">'+esc(p.excerpt)+'</div>' +
+      '<div class="card-footer"><span class="read-more">Read Article →</span><span style="font-size:12px;color:#aaa">Souvik Das</span></div>' +
+    '</div>';
+  }).join('');
+}
+
+// Filter
+function setFilter(cat, btn) {
+  filter = cat;
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  render();
+}
+
+// Admin open/close
+function openAdmin() {
+  document.getElementById('adminOverlay').classList.add('open');
+  if (unlocked) {
+    showScreen('formScreen');
+    document.getElementById('mTitle').textContent = 'New Article';
+  } else {
+    showScreen('pwdScreen');
+    document.getElementById('mTitle').textContent = 'Admin Login';
+    setTimeout(function(){ document.getElementById('pwdInput').focus(); }, 100);
+  }
+}
+
+function closeAdmin() {
+  document.getElementById('adminOverlay').classList.remove('open');
+}
+
+// Close admin when clicking outside modal
+document.getElementById('adminOverlay').addEventListener('click', function(e){
+  if (e.target === this) closeAdmin();
+});
+
+// Password check
+function checkPwd() {
+  var v = document.getElementById('pwdInput').value;
+  if (v === PASS) {
+    unlocked = true;
+    document.getElementById('pwdError').style.display = 'none';
+    document.getElementById('pwdInput').value = '';
+    document.getElementById('mTitle').textContent = 'New Article';
+    showScreen('formScreen');
+  } else {
+    document.getElementById('pwdError').style.display = 'block';
+    document.getElementById('pwdInput').value = '';
+    document.getElementById('pwdInput').focus();
+  }
+}
+
+// Publish
+function publishPost() {
+  var t = document.getElementById('fTitle').value.trim();
+  var c = document.getElementById('fCat').value;
+  var r = document.getElementById('fRT').value;
+  var e = document.getElementById('fExcerpt').value.trim();
+  var b = document.getElementById('fContent').value.trim();
+  var err = document.getElementById('formError');
+  if (!t || !c || !r || !e || !b) { err.style.display='block'; return; }
+  err.style.display = 'none';
+  posts.unshift({ id:Date.now(), title:t, cat:c, rt:parseInt(r), excerpt:e, content:b, date:new Date().toISOString() });
+  save();
+  render();
+  closeAdmin();
+  document.getElementById('fTitle').value='';
+  document.getElementById('fCat').value='';
+  document.getElementById('fRT').value='';
+  document.getElementById('fExcerpt').value='';
+  document.getElementById('fContent').value='';
+}
+
+// Delete
+function delPost(id) {
+  if (!confirm('Delete this article permanently?')) return;
+  posts = posts.filter(function(p){ return p.id!==id; });
+  save();
+  render();
+}
+
+// Open full post
+function openPost(id) {
+  var p = null;
+  for (var i=0;i<posts.length;i++) { if (posts[i].id===id){p=posts[i];break;} }
+  if (!p) return;
+  document.getElementById('pCat').innerHTML = '<span class="ctag ct-'+esc(p.cat)+'">'+esc(p.cat)+'</span>';
+  document.getElementById('pTitle').textContent = p.title;
+  document.getElementById('pMeta').textContent = fmt(p.date)+' · '+p.rt+' min read · By Souvik Das';
+  document.getElementById('pBody').textContent = p.content;
+  document.getElementById('postOverlay').classList.add('open');
+}
+
+function closePost() {
+  document.getElementById('postOverlay').classList.remove('open');
+}
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+}
+
+// Init
+load();
+render();
+</script>
+</body>
+</html>
