@@ -4,123 +4,203 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Souvik Das | Finance Professional</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-body { font-family: 'Source Sans 3', sans-serif; color: #1a1a2e; background: #fff; line-height: 1.7; }
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+body { font-family:'Open Sans',sans-serif; font-weight:300; color:#222; background:#fff; line-height:1.7; }
 
+/* NAV */
 nav {
-  background: #1a1a2e; padding: 18px 8%;
-  display: flex; justify-content: space-between; align-items: center;
-  position: sticky; top: 0; z-index: 100;
+  background:#1a2744; padding:18px 8%;
+  display:flex; justify-content:space-between; align-items:center;
+  position:sticky; top:0; z-index:100;
 }
-.nav-brand { font-family: 'Merriweather', serif; color: #fff; font-size: 18px; font-weight: 400; }
-.nav-links { display: flex; gap: 30px; list-style: none; }
-.nav-links a { color: #aab; text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; transition: color 0.2s; }
-.nav-links a:hover { color: #c8a84b; }
+.nav-brand { font-family:'Merriweather',serif; color:#fff; font-size:18px; font-weight:400; }
+.nav-links { display:flex; gap:28px; list-style:none; }
+.nav-links a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:13px; letter-spacing:0.06em; transition:color 0.2s; }
+.nav-links a:hover { color:#fff; }
+.gold-bar { height:3px; background:linear-gradient(90deg,#c8a84b,#e8d090,#c8a84b); }
 
-.gold-bar { height: 3px; background: linear-gradient(90deg, #c8a84b, #e8d090, #c8a84b); }
-
-.hero {
-  background: #1a1a2e; color: #fff; padding: 80px 8%;
-  display: flex; align-items: center; gap: 60px;
-}
+/* HERO */
+.hero { background:#1a2744; color:#fff; padding:80px 8%; display:flex; align-items:center; gap:60px; }
 .hero-photo {
-  width: 170px; height: 200px; flex-shrink: 0;
-  background: #2a2a45; border: 2px solid #c8a84b;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Merriweather', serif; font-size: 42px; color: #c8a84b; overflow: hidden;
+  width:160px; height:190px; flex-shrink:0;
+  background:#243460; border:2px solid #c8a84b;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Merriweather',serif; font-size:38px; color:#c8a84b; overflow:hidden;
 }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.hero-title { color: #c8a84b; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
-.hero-name { font-family: 'Merriweather', serif; font-size: 42px; font-weight: 300; margin-bottom: 20px; }
-.hero-bio { color: #b0b0c8; font-size: 15px; max-width: 520px; margin-bottom: 28px; line-height: 1.8; }
-.hero-btn {
-  display: inline-block; padding: 12px 28px; background: #c8a84b; color: #1a1a2e;
-  font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s;
-}
-.hero-btn:hover { background: #dbbe6a; }
+.hero-photo img { width:100%; height:100%; object-fit:cover; object-position:top; }
+.hero-label { font-size:11px; color:#c8a84b; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; margin-bottom:12px; }
+.hero-name { font-family:'Merriweather',serif; font-size:40px; font-weight:300; margin-bottom:18px; }
+.hero-bio { color:rgba(255,255,255,0.7); font-size:15px; max-width:520px; margin-bottom:28px; line-height:1.8; }
+.hero-stats { display:flex; gap:36px; margin-bottom:32px; }
+.stat-num { font-family:'Merriweather',serif; font-size:26px; color:#c8a84b; line-height:1; }
+.stat-lbl { font-size:11px; color:rgba(255,255,255,0.5); margin-top:4px; letter-spacing:0.06em; }
+.hero-btn { display:inline-block; padding:12px 28px; background:#c8a84b; color:#1a2744; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border:none; cursor:pointer; transition:background 0.2s; }
+.hero-btn:hover { background:#dbbe6a; }
 
-section { padding: 70px 8%; }
-section:nth-child(even) { background: #f7f7fb; }
+/* SECTIONS */
+section { padding:70px 8%; }
+section:nth-child(even) { background:#f7f9fc; }
+.section-label { font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:#c8a84b; margin-bottom:8px; }
+.section-title { font-family:'Merriweather',serif; font-size:28px; font-weight:400; color:#1a2744; margin-bottom:40px; padding-bottom:16px; border-bottom:2px solid #1a2744; }
 
-.section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: #c8a84b; margin-bottom: 8px; }
-.section-title { font-family: 'Merriweather', serif; font-size: 28px; font-weight: 400; color: #1a1a2e; margin-bottom: 40px; padding-bottom: 16px; border-bottom: 1px solid #e0e0ec; }
+/* ABOUT */
+.about-text p { font-size:15px; color:#444; line-height:1.9; margin-bottom:16px; max-width:780px; }
+.about-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:32px; }
+.acard { background:#fff; border:1px solid #e0e8f0; border-left:3px solid #1a2744; padding:18px 20px; }
+.acard h4 { font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#1a2744; margin-bottom:6px; }
+.acard p { font-size:13px; color:#555; line-height:1.6; }
 
-.about-text { max-width: 760px; color: #444; font-size: 15px; line-height: 1.9; }
-.about-text p { margin-bottom: 16px; }
+/* EXPERIENCE */
+.exp-item { display:grid; grid-template-columns:210px 1fr; gap:40px; padding:32px 0; border-bottom:1px solid #e8e8f0; }
+.exp-item:last-child { border-bottom:none; }
+.exp-period { font-size:12px; color:#c8a84b; font-weight:600; margin-bottom:4px; }
+.exp-company { font-size:13px; color:#888; }
+.exp-role { font-family:'Merriweather',serif; font-size:18px; font-weight:400; color:#1a2744; margin-bottom:14px; }
+.exp-points { list-style:none; display:flex; flex-direction:column; gap:8px; }
+.exp-points li { font-size:14px; color:#555; padding-left:16px; position:relative; line-height:1.6; }
+.exp-points li::before { content:'▸'; position:absolute; left:0; color:#c8a84b; font-size:10px; top:4px; }
 
-.exp-item { display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 32px 0; border-bottom: 1px solid #e8e8f0; }
-.exp-item:last-child { border-bottom: none; }
-.exp-period { font-size: 13px; color: #c8a84b; font-weight: 600; margin-bottom: 4px; }
-.exp-company { font-size: 13px; color: #888; }
-.exp-role { font-family: 'Merriweather', serif; font-size: 18px; font-weight: 400; color: #1a1a2e; margin-bottom: 14px; }
-.exp-points { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.exp-points li { font-size: 14px; color: #555; padding-left: 16px; position: relative; }
-.exp-points li::before { content: '▸'; position: absolute; left: 0; color: #c8a84b; font-size: 10px; top: 3px; }
+/* SKILLS */
+.skills-wrap { display:flex; flex-wrap:wrap; gap:10px; }
+.skill-tag { padding:10px 20px; background:#fff; border:1px solid #d0d8e8; color:#333; font-size:13px; font-weight:400; transition:all 0.2s; }
+.skill-tag:hover { border-color:#c8a84b; color:#1a2744; background:#fdf8ee; }
 
-.skills-grid { display: flex; flex-wrap: wrap; gap: 12px; }
-.skill-tag { padding: 10px 20px; background: #fff; border: 1px solid #d0d0e0; color: #333; font-size: 13px; font-weight: 500; transition: all 0.2s; }
-.skill-tag:hover { border-color: #c8a84b; color: #1a1a2e; background: #fdf8ee; }
+/* ── BLOG SECTION ── */
+#insights { background:#f7f9fc; }
 
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-.contact-info p { color: #555; font-size: 15px; margin-bottom: 28px; line-height: 1.8; }
-.contact-item { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; font-size: 14px; color: #444; text-decoration: none; }
-.contact-item:hover { color: #c8a84b; }
-.contact-icon { width: 36px; height: 36px; background: #1a1a2e; color: #c8a84b; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.blog-filter { display:flex; gap:0; flex-wrap:wrap; margin-bottom:32px; border-bottom:1px solid #e0e8f0; }
+.bf-btn { padding:12px 20px; border:none; background:none; font-family:'Open Sans',sans-serif; font-size:13px; color:#888; cursor:pointer; border-bottom:2px solid transparent; transition:color 0.2s,border-color 0.2s; white-space:nowrap; }
+.bf-btn:hover { color:#1a2744; }
+.bf-btn.active { color:#1a2744; border-bottom-color:#1a2744; font-weight:600; }
 
-.form-row { margin-bottom: 16px; }
-.form-row input, .form-row textarea {
-  width: 100%; padding: 12px 16px; border: 1px solid #d0d0e0; background: #fff;
-  font-family: 'Source Sans 3', sans-serif; font-size: 14px; color: #1a1a2e; outline: none; transition: border-color 0.2s; resize: none;
-}
-.form-row input:focus, .form-row textarea:focus { border-color: #c8a84b; }
-.form-row input::placeholder, .form-row textarea::placeholder { color: #aaa; }
-.form-btn {
-  padding: 13px 32px; background: #1a1a2e; color: #fff; border: none;
-  font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 600;
-  letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
-}
-.form-btn:hover { background: #c8a84b; color: #1a1a2e; }
+.blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:20px; }
 
-footer { background: #1a1a2e; color: #888; text-align: center; padding: 24px 8%; font-size: 13px; }
+.blog-card { background:#fff; border:1px solid #e0e8f0; border-left:3px solid #1a2744; padding:24px; cursor:pointer; transition:box-shadow 0.2s,transform 0.2s; }
+.blog-card:hover { box-shadow:0 4px 20px rgba(26,39,68,0.1); transform:translateY(-2px); }
+.bc-top { display:flex; align-items:center; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+.ctag { font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:3px 8px; }
+.ct-Banking { background:#e8f0fb; color:#1a2744; }
+.ct-Economics { background:#e8f5ee; color:#1a6632; }
+.ct-Investment { background:#fdf3e3; color:#8a4f00; }
+.ct-Insurance { background:#f3e8fb; color:#5a1a7a; }
+.ct-Finance { background:#fbe8e8; color:#7a1a1a; }
+.bc-meta { font-size:12px; color:#999; margin-left:auto; display:flex; gap:10px; }
+.bc-title { font-family:'Merriweather',serif; font-size:17px; font-weight:700; color:#1a2744; margin-bottom:8px; line-height:1.35; }
+.bc-excerpt { font-size:13px; color:#666; line-height:1.7; margin-bottom:14px; }
+.bc-footer { display:flex; justify-content:space-between; align-items:center; }
+.bc-readmore { font-size:13px; font-weight:600; color:#1a2744; }
+.bc-del { background:none; border:none; color:#ddd; cursor:pointer; font-size:14px; padding:4px 6px; transition:color 0.2s; }
+.bc-del:hover { color:#c0392b; }
 
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hero { flex-direction: column; padding: 50px 5%; gap: 30px; text-align: center; }
-  .hero-bio { margin: 0 auto 24px; }
-  .exp-item { grid-template-columns: 1fr; gap: 8px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  section { padding: 50px 5%; }
+.blog-empty { grid-column:1/-1; text-align:center; padding:60px 20px; }
+.blog-empty h3 { font-family:'Merriweather',serif; font-size:20px; color:#ccc; margin-bottom:10px; }
+.blog-empty p { font-size:14px; color:#bbb; }
+
+/* CONTACT */
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+.contact-info p { color:#555; font-size:15px; margin-bottom:28px; line-height:1.8; }
+.citem { display:flex; align-items:center; gap:14px; margin-bottom:18px; font-size:14px; color:#444; text-decoration:none; transition:color 0.2s; }
+.citem:hover { color:#c8a84b; }
+.cicon { width:36px; height:36px; background:#1a2744; color:#c8a84b; display:flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; }
+.form-row { margin-bottom:14px; }
+.form-row input,.form-row textarea { width:100%; padding:12px 16px; border:1px solid #d0d8e8; background:#fff; font-family:'Open Sans',sans-serif; font-size:14px; color:#222; outline:none; transition:border-color 0.2s; resize:none; }
+.form-row input:focus,.form-row textarea:focus { border-color:#1a2744; }
+.form-row input::placeholder,.form-row textarea::placeholder { color:#aaa; }
+.form-btn { padding:13px 32px; background:#1a2744; color:#fff; border:none; font-family:'Open Sans',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; transition:background 0.2s; }
+.form-btn:hover { background:#c8a84b; color:#1a2744; }
+
+/* FOOTER */
+footer { background:#1a2744; color:rgba(255,255,255,0.5); text-align:center; padding:24px 8%; font-size:13px; }
+footer span { color:rgba(255,255,255,0.8); }
+
+/* ADMIN BUTTON */
+.admin-fab { position:fixed; bottom:28px; right:28px; background:#1a2744; color:#c8a84b; border:none; width:52px; height:52px; border-radius:50%; font-size:22px; cursor:pointer; box-shadow:0 4px 18px rgba(26,39,68,0.45); z-index:300; display:flex; align-items:center; justify-content:center; transition:background 0.2s,transform 0.2s; }
+.admin-fab:hover { background:#243460; transform:scale(1.08); }
+
+/* OVERLAYS */
+.overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:400; align-items:center; justify-content:center; padding:20px; }
+.overlay.open { display:flex; }
+.modal { background:#fff; width:100%; max-width:560px; max-height:90vh; overflow-y:auto; border-top:4px solid #1a2744; }
+.modal-hdr { padding:22px 28px 16px; border-bottom:1px solid #e0e8f0; display:flex; justify-content:space-between; align-items:center; }
+.modal-hdr h2 { font-family:'Merriweather',serif; font-size:18px; color:#1a2744; }
+.mclose { background:none; border:none; font-size:26px; color:#aaa; cursor:pointer; }
+.mclose:hover { color:#333; }
+.modal-body { padding:22px 28px; }
+.screen { display:none; }
+.screen.active { display:block; }
+.pwd-info { font-size:14px; color:#666; margin-bottom:18px; text-align:center; }
+.field { margin-bottom:14px; }
+.field label { display:block; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#1a2744; margin-bottom:5px; }
+.field input,.field select,.field textarea { width:100%; padding:11px 14px; border:1px solid #d0d8e8; font-family:'Open Sans',sans-serif; font-size:14px; color:#333; outline:none; transition:border-color 0.2s; resize:vertical; background:#fff; }
+.field input:focus,.field select:focus,.field textarea:focus { border-color:#1a2744; }
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.errmsg { font-size:13px; color:#c0392b; margin-bottom:10px; text-align:center; display:none; }
+.btn-pub { width:100%; padding:13px; background:#1a2744; color:#fff; border:none; font-family:'Open Sans',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.08em; cursor:pointer; transition:background 0.2s; margin-top:6px; }
+.btn-pub:hover { background:#c8a84b; color:#1a2744; }
+
+/* POST READ OVERLAY */
+.post-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:500; overflow-y:auto; padding:24px; }
+.post-overlay.open { display:block; }
+.post-modal { background:#fff; max-width:700px; margin:40px auto; padding:48px; position:relative; }
+.pclose { position:absolute; top:16px; right:20px; background:none; border:none; font-size:26px; color:#aaa; cursor:pointer; }
+.pclose:hover { color:#333; }
+.p-cat { margin-bottom:16px; }
+.p-title { font-family:'Merriweather',serif; font-size:26px; color:#1a2744; line-height:1.3; margin-bottom:12px; }
+.p-meta { font-size:13px; color:#999; margin-bottom:28px; padding-bottom:20px; border-bottom:1px solid #e0e8f0; }
+.p-body { font-size:15px; color:#444; line-height:1.9; white-space:pre-wrap; }
+
+@media(max-width:768px) {
+  .nav-links { display:none; }
+  .hero { flex-direction:column; padding:50px 5%; gap:28px; text-align:center; }
+  .hero-stats { justify-content:center; }
+  .hero-bio { margin:0 auto 24px; }
+  .about-cards { grid-template-columns:1fr; }
+  .exp-item { grid-template-columns:1fr; gap:8px; }
+  .blog-grid { grid-template-columns:1fr; }
+  .contact-grid { grid-template-columns:1fr; gap:40px; }
+  .two-col { grid-template-columns:1fr; }
+  .post-modal { padding:28px 18px; margin:20px auto; }
+  section { padding:50px 5%; }
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-brand">Souvik Das</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#insights">Insights</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 <div class="gold-bar"></div>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-photo">
-    <img src="profile.jpg" alt="Souvik Das" onerror="this.style.display='none'; this.parentElement.textContent='SD'">
+  <div class="hero-photo" id="heroPhoto">
+    <img src="profile.jpg" alt="Souvik Das" onerror="this.style.display='none';document.getElementById('heroPhoto').textContent='SD'">
   </div>
   <div>
-    <div class="hero-title">Finance Professional · Kolkata, India</div>
+    <div class="hero-label">Finance Professional · Kolkata, India</div>
     <div class="hero-name">Souvik Das</div>
-    <p class="hero-bio">Assistant Manager with cross-industry experience in banking, financial services, and insurance. Focused on investment advisory, business growth, and long-term financial strategy.</p>
+    <p class="hero-bio">Assistant Manager with 4+ years of cross-industry experience in banking, financial services, and insurance. Focused on investment advisory, business growth, and long-term financial strategy.</p>
+    <div class="hero-stats">
+      <div><div class="stat-num">4+</div><div class="stat-lbl">Years Experience</div></div>
+      <div><div class="stat-num">3</div><div class="stat-lbl">Institutions</div></div>
+      <div><div class="stat-num">MA</div><div class="stat-lbl">Economics</div></div>
+    </div>
     <a href="#contact" class="hero-btn">Get In Touch</a>
   </div>
 </div>
 <div class="gold-bar"></div>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="section-label">Background</div>
   <h2 class="section-title">About Me</h2>
@@ -129,17 +209,19 @@ footer { background: #1a1a2e; color: #888; text-align: center; padding: 24px 8%;
     <p>Previously contributed to HDB Financial Services Ltd in finance operations, and began my professional journey at IDFC First Bank driving credit acquisition, savings portfolio growth, and consumer finance solutions.</p>
     <p>Pursuing an MA in Economics from IGNOU and holding a B.Com in Business Management & Finance from Calcutta University. My long-term goal is to contribute meaningfully in investment management, economic research, or senior banking leadership.</p>
   </div>
+  <div class="about-cards">
+    <div class="acard"><h4>Education</h4><p>MA Economics — IGNOU (Pursuing)<br>B.Com — Calcutta University</p></div>
+    <div class="acard"><h4>Location</h4><p>Kolkata, West Bengal, India</p></div>
+    <div class="acard"><h4>Specialisation</h4><p>Banking · Insurance · Investment Advisory · Risk Management</p></div>
+  </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">Career</div>
   <h2 class="section-title">Experience</h2>
-
   <div class="exp-item">
-    <div>
-      <div class="exp-period">Dec 2025 – Present</div>
-      <div class="exp-company">Axis Max Life Insurance Ltd</div>
-    </div>
+    <div><div class="exp-period">Dec 2025 – Present</div><div class="exp-company">Axis Max Life Insurance Ltd</div></div>
     <div>
       <div class="exp-role">Assistant Manager</div>
       <ul class="exp-points">
@@ -151,12 +233,8 @@ footer { background: #1a1a2e; color: #888; text-align: center; padding: 24px 8%;
       </ul>
     </div>
   </div>
-
   <div class="exp-item">
-    <div>
-      <div class="exp-period">Previous Role</div>
-      <div class="exp-company">HDB Financial Services Ltd</div>
-    </div>
+    <div><div class="exp-period">Previous Role</div><div class="exp-company">HDB Financial Services Ltd</div></div>
     <div>
       <div class="exp-role">Finance Executive</div>
       <ul class="exp-points">
@@ -166,12 +244,8 @@ footer { background: #1a1a2e; color: #888; text-align: center; padding: 24px 8%;
       </ul>
     </div>
   </div>
-
   <div class="exp-item">
-    <div>
-      <div class="exp-period">Earlier</div>
-      <div class="exp-company">IDFC First Bank</div>
-    </div>
+    <div><div class="exp-period">Earlier</div><div class="exp-company">IDFC First Bank</div></div>
     <div>
       <div class="exp-role">Senior Business Development Officer</div>
       <ul class="exp-points">
@@ -183,10 +257,11 @@ footer { background: #1a1a2e; color: #888; text-align: center; padding: 24px 8%;
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-label">Expertise</div>
   <h2 class="section-title">Core Skills</h2>
-  <div class="skills-grid">
+  <div class="skills-wrap">
     <div class="skill-tag">Financial Analysis</div>
     <div class="skill-tag">Banking Operations</div>
     <div class="skill-tag">Insurance Advisory</div>
@@ -200,24 +275,31 @@ footer { background: #1a1a2e; color: #888; text-align: center; padding: 24px 8%;
   </div>
 </section>
 
+<!-- INSIGHTS / BLOG -->
+<section id="insights">
+  <div class="section-label">Thought Leadership</div>
+  <h2 class="section-title">Financial Insights</h2>
+  <div class="blog-filter">
+    <button class="bf-btn active" onclick="setFilter('All',this)">All</button>
+    <button class="bf-btn" onclick="setFilter('Banking',this)">Banking</button>
+    <button class="bf-btn" onclick="setFilter('Economics',this)">Economics</button>
+    <button class="bf-btn" onclick="setFilter('Investment',this)">Investment</button>
+    <button class="bf-btn" onclick="setFilter('Insurance',this)">Insurance</button>
+    <button class="bf-btn" onclick="setFilter('Finance',this)">Finance</button>
+  </div>
+  <div class="blog-grid" id="blogGrid"></div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-label">Get In Touch</div>
   <h2 class="section-title">Contact</h2>
   <div class="contact-grid">
     <div class="contact-info">
       <p>Feel free to reach out for professional inquiries, financial advisory discussions, or simply to connect.</p>
-      <a href="mailto:souvik.das39@yahoo.com" class="contact-item">
-        <div class="contact-icon">✉</div>
-        souvik.das39@yahoo.com
-      </a>
-      <div class="contact-item">
-        <div class="contact-icon">📍</div>
-        Kolkata, West Bengal, India
-      </div>
-      <a href="https://www.linkedin.com/in/souvik-das-14a22b224" target="_blank" class="contact-item">
-        <div class="contact-icon">in</div>
-        LinkedIn Profile
-      </a>
+      <a href="mailto:souvik.das39@yahoo.com" class="citem"><div class="cicon">✉</div>souvik.das39@yahoo.com</a>
+      <div class="citem"><div class="cicon">📍</div>Kolkata, West Bengal, India</div>
+      <a href="https://www.linkedin.com/in/souvik-das-14a22b224" target="_blank" class="citem"><div class="cicon">in</div>LinkedIn Profile</a>
     </div>
     <div>
       <div class="form-row"><input type="text" placeholder="Your Name"></div>
@@ -228,9 +310,50 @@ footer { background: #1a1a2e; color: #888; text-align: center; padding: 24px 8%;
   </div>
 </section>
 
-<footer>
-  © 2026 Souvik Das &nbsp;·&nbsp; souvik-advisory.netlify.app
-</footer>
+<footer>© 2026 <span>Souvik Das</span> · Finance Professional · Kolkata · souvik-advisory.netlify.app</footer>
 
-</body>
-</html>
+<!-- ADMIN BUTTON -->
+<button class="admin-fab" onclick="openAdmin()" title="Write Article">✎</button>
+
+<!-- ADMIN OVERLAY -->
+<div class="overlay" id="adminOverlay">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-hdr">
+      <h2 id="mTitle">Admin Login</h2>
+      <button class="mclose" onclick="closeAdmin()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="screen active" id="pwdScreen">
+        <p class="pwd-info">Enter your password to publish an article.</p>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="pwdInput" placeholder="Enter password" onkeydown="if(event.key==='Enter')checkPwd()">
+        </div>
+        <p class="errmsg" id="pwdError">Incorrect password. Please try again.</p>
+        <button class="btn-pub" onclick="checkPwd()">Unlock →</button>
+      </div>
+      <div class="screen" id="formScreen">
+        <div class="field">
+          <label>Article Title *</label>
+          <input type="text" id="fTitle" placeholder="e.g. How RBI Rate Cuts Affect Your Savings">
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label>Category *</label>
+            <select id="fCat">
+              <option value="">Select…</option>
+              <option>Banking</option>
+              <option>Economics</option>
+              <option>Investment</option>
+              <option>Insurance</option>
+              <option>Finance</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Reading Time (min) *</label>
+            <input type="number" id="fRT" placeholder="5" min="1" max="60">
+          </div>
+        </div>
+        <div class="field">
+          <label>Short Summary *</label>
+          <textarea id="fExcerpt" rows="3" placeholder="2–3 sentence summary shown on the listin
