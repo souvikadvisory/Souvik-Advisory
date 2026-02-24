@@ -1,251 +1,235 @@
-![1000252406](https://github.com/user-attachments/assets/2ea5d68a-8975-4f5e-a318-d0641c5a9154)
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Souvik Das | Finance Professional</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-scroll-behavior:smooth;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: #1a1a2e; background: #fff; line-height: 1.7; }
 
-body{
-background:#ffffff;
-color:#111;
-line-height:1.7;
+nav {
+  background: #1a1a2e; padding: 18px 8%;
+  display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 100;
 }
+.nav-brand { font-family: 'Merriweather', serif; color: #fff; font-size: 18px; font-weight: 400; }
+.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-links a { color: #aab; text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; transition: color 0.2s; }
+.nav-links a:hover { color: #c8a84b; }
 
-.hero{
-background:#000;
-color:#fff;
-padding:100px 10%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
-}
+.gold-bar { height: 3px; background: linear-gradient(90deg, #c8a84b, #e8d090, #c8a84b); }
 
-.hero-text{
-max-width:600px;
+.hero {
+  background: #1a1a2e; color: #fff; padding: 80px 8%;
+  display: flex; align-items: center; gap: 60px;
 }
+.hero-photo {
+  width: 170px; height: 200px; flex-shrink: 0;
+  background: #2a2a45; border: 2px solid #c8a84b;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Merriweather', serif; font-size: 42px; color: #c8a84b; overflow: hidden;
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.hero-title { color: #c8a84b; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+.hero-name { font-family: 'Merriweather', serif; font-size: 42px; font-weight: 300; margin-bottom: 20px; }
+.hero-bio { color: #b0b0c8; font-size: 15px; max-width: 520px; margin-bottom: 28px; line-height: 1.8; }
+.hero-btn {
+  display: inline-block; padding: 12px 28px; background: #c8a84b; color: #1a1a2e;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+}
+.hero-btn:hover { background: #dbbe6a; }
 
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:48px;
-margin-bottom:20px;
-}
+section { padding: 70px 8%; }
+section:nth-child(even) { background: #f7f7fb; }
 
-.hero p{
-font-weight:300;
-margin-bottom:25px;
-}
+.section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: #c8a84b; margin-bottom: 8px; }
+.section-title { font-family: 'Merriweather', serif; font-size: 28px; font-weight: 400; color: #1a1a2e; margin-bottom: 40px; padding-bottom: 16px; border-bottom: 1px solid #e0e0ec; }
 
-.hero button{
-padding:12px 25px;
-border:1px solid #fff;
-background:transparent;
-color:#fff;
-cursor:pointer;
-transition:0.3s;
-}
+.about-text { max-width: 760px; color: #444; font-size: 15px; line-height: 1.9; }
+.about-text p { margin-bottom: 16px; }
 
-.hero button:hover{
-background:#fff;
-color:#000;
-}
+.exp-item { display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 32px 0; border-bottom: 1px solid #e8e8f0; }
+.exp-item:last-child { border-bottom: none; }
+.exp-period { font-size: 13px; color: #c8a84b; font-weight: 600; margin-bottom: 4px; }
+.exp-company { font-size: 13px; color: #888; }
+.exp-role { font-family: 'Merriweather', serif; font-size: 18px; font-weight: 400; color: #1a1a2e; margin-bottom: 14px; }
+.exp-points { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.exp-points li { font-size: 14px; color: #555; padding-left: 16px; position: relative; }
+.exp-points li::before { content: '▸'; position: absolute; left: 0; color: #c8a84b; font-size: 10px; top: 3px; }
 
-.hero img{
-width:280px;
-border-radius:6px;
-filter:grayscale(20%);
-}
+.skills-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.skill-tag { padding: 10px 20px; background: #fff; border: 1px solid #d0d0e0; color: #333; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+.skill-tag:hover { border-color: #c8a84b; color: #1a1a2e; background: #fdf8ee; }
 
-section{
-padding:80px 12%;
-}
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.contact-info p { color: #555; font-size: 15px; margin-bottom: 28px; line-height: 1.8; }
+.contact-item { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; font-size: 14px; color: #444; text-decoration: none; }
+.contact-item:hover { color: #c8a84b; }
+.contact-icon { width: 36px; height: 36px; background: #1a1a2e; color: #c8a84b; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
 
-.section-title{
-font-size:28px;
-font-weight:600;
-margin-bottom:40px;
-border-left:4px solid #000;
-padding-left:15px;
+.form-row { margin-bottom: 16px; }
+.form-row input, .form-row textarea {
+  width: 100%; padding: 12px 16px; border: 1px solid #d0d0e0; background: #fff;
+  font-family: 'Source Sans 3', sans-serif; font-size: 14px; color: #1a1a2e; outline: none; transition: border-color 0.2s; resize: none;
 }
+.form-row input:focus, .form-row textarea:focus { border-color: #c8a84b; }
+.form-row input::placeholder, .form-row textarea::placeholder { color: #aaa; }
+.form-btn {
+  padding: 13px 32px; background: #1a1a2e; color: #fff; border: none;
+  font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+}
+.form-btn:hover { background: #c8a84b; color: #1a1a2e; }
 
-.card{
-margin-bottom:35px;
-}
+footer { background: #1a1a2e; color: #888; text-align: center; padding: 24px 8%; font-size: 13px; }
 
-h3{
-margin-bottom:8px;
-font-weight:600;
-}
-
-ul{
-margin-top:10px;
-padding-left:18px;
-}
-
-.skills span{
-display:inline-block;
-border:1px solid #000;
-padding:8px 14px;
-margin:6px;
-font-size:13px;
-}
-
-.services{
-background:#f5f5f5;
-}
-
-.contact{
-background:#000;
-color:#fff;
-text-align:center;
-}
-
-.contact a{
-color:#fff;
-text-decoration:underline;
-}
-
-footer{
-text-align:center;
-padding:25px;
-font-size:13px;
-border-top:1px solid #eee;
-}
-
-@media(max-width:900px){
-.hero{
-flex-direction:column;
-text-align:center;
-}
-.hero img{
-margin-top:40px;
-}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hero { flex-direction: column; padding: 50px 5%; gap: 30px; text-align: center; }
+  .hero-bio { margin: 0 auto 24px; }
+  .exp-item { grid-template-columns: 1fr; gap: 8px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  section { padding: 50px 5%; }
 }
 </style>
 </head>
-
 <body>
 
+<nav>
+  <div class="nav-brand">Souvik Das</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<div class="gold-bar"></div>
+
 <div class="hero">
-<div class="hero-text">
-<h1>Souvik Das</h1>
-<p>Assistant Manager | Finance Executive | Investment Analyst Aspirant</p>
-<p>
-Finance professional with cross-industry experience in banking, financial services, and insurance. Focused on structured growth, risk alignment, and long-term financial independence.
-</p>
-<button onclick="document.getElementById('contact').scrollIntoView()">Connect With Me</button>
+  <div class="hero-photo">
+    <img src="profile.jpg" alt="Souvik Das" onerror="this.style.display='none'; this.parentElement.textContent='SD'">
+  </div>
+  <div>
+    <div class="hero-title">Finance Professional · Kolkata, India</div>
+    <div class="hero-name">Souvik Das</div>
+    <p class="hero-bio">Assistant Manager with cross-industry experience in banking, financial services, and insurance. Focused on investment advisory, business growth, and long-term financial strategy.</p>
+    <a href="#contact" class="hero-btn">Get In Touch</a>
+  </div>
 </div>
-<img src="profile.jpg" alt="Souvik Das">
-</div>
+<div class="gold-bar"></div>
 
-<section>
-<h2 class="section-title">About</h2>
-<div class="card">
-<p>
-Currently serving as Assistant Manager at Axis Max Life Insurance Limited, leading people management, business expansion strategies, investment planning, and client relationship optimization.
-</p>
-<br>
-<p>
-Previously contributed to HDB Financial Services Ltd in finance operations and began my professional journey at IDFC First Bank driving credit acquisition, savings portfolio growth, and consumer finance solutions.
-</p>
-<br>
-<p>
-Pursuing MA in Economics from IGNOU and holding a B.Com in Business Management & Finance from Calcutta University. Long-term objective: achieve financial independence while contributing meaningfully in banking, economic research, or investment management.
-</p>
-</div>
+<section id="about">
+  <div class="section-label">Background</div>
+  <h2 class="section-title">About Me</h2>
+  <div class="about-text">
+    <p>Currently serving as Assistant Manager at Axis Max Life Insurance Limited, where I lead team performance, business expansion strategy, investment planning, and client relationship management.</p>
+    <p>Previously contributed to HDB Financial Services Ltd in finance operations, and began my professional journey at IDFC First Bank driving credit acquisition, savings portfolio growth, and consumer finance solutions.</p>
+    <p>Pursuing an MA in Economics from IGNOU and holding a B.Com in Business Management & Finance from Calcutta University. My long-term goal is to contribute meaningfully in investment management, economic research, or senior banking leadership.</p>
+  </div>
 </section>
 
-<section>
-<h2 class="section-title">Experience</h2>
+<section id="experience">
+  <div class="section-label">Career</div>
+  <h2 class="section-title">Experience</h2>
 
-<div class="card">
-<h3>Assistant Manager — Axis Max Life Insurance Limited</h3>
-<p><strong>Dec 2025 – Present</strong></p>
-<ul>
-<li>Team leadership & performance monitoring</li>
-<li>Strategic business growth initiatives</li>
-<li>Investment and insurance advisory</li>
-<li>Risk assessment & portfolio alignment</li>
-<li>Customer satisfaction optimization</li>
-</ul>
-</div>
+  <div class="exp-item">
+    <div>
+      <div class="exp-period">Dec 2025 – Present</div>
+      <div class="exp-company">Axis Max Life Insurance Ltd</div>
+    </div>
+    <div>
+      <div class="exp-role">Assistant Manager</div>
+      <ul class="exp-points">
+        <li>Team leadership & performance monitoring</li>
+        <li>Strategic business growth and market expansion</li>
+        <li>Investment and insurance advisory for clients</li>
+        <li>Risk assessment & portfolio alignment</li>
+        <li>Customer satisfaction optimisation</li>
+      </ul>
+    </div>
+  </div>
 
-<div class="card">
-<h3>Finance Executive — HDB Financial Services Ltd</h3>
-<ul>
-<li>Finance department coordination</li>
-<li>Revenue growth support</li>
-<li>Operational financial management</li>
-</ul>
-</div>
+  <div class="exp-item">
+    <div>
+      <div class="exp-period">Previous Role</div>
+      <div class="exp-company">HDB Financial Services Ltd</div>
+    </div>
+    <div>
+      <div class="exp-role">Finance Executive</div>
+      <ul class="exp-points">
+        <li>Finance department coordination and reporting</li>
+        <li>Revenue growth support</li>
+        <li>Operational financial management</li>
+      </ul>
+    </div>
+  </div>
 
-<div class="card">
-<h3>Senior Business Development Officer — IDFC First Bank</h3>
-<ul>
-<li>Credit card and savings portfolio acquisition</li>
-<li>Consumer durable loan sales</li>
-<li>Customer lifecycle management</li>
-</ul>
-</div>
-
+  <div class="exp-item">
+    <div>
+      <div class="exp-period">Earlier</div>
+      <div class="exp-company">IDFC First Bank</div>
+    </div>
+    <div>
+      <div class="exp-role">Senior Business Development Officer</div>
+      <ul class="exp-points">
+        <li>Credit card and savings portfolio acquisition</li>
+        <li>Consumer durable loan sales</li>
+        <li>Customer lifecycle management</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2 class="section-title">Core Competencies</h2>
-<div class="skills">
-<span>Financial Analysis</span>
-<span>Banking Operations</span>
-<span>Insurance Advisory</span>
-<span>Risk Profiling</span>
-<span>MS Excel</span>
-<span>Business Growth Strategy</span>
-<span>Client Relationship Management</span>
-<span>Analytical Thinking</span>
-</div>
+<section id="skills">
+  <div class="section-label">Expertise</div>
+  <h2 class="section-title">Core Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-tag">Financial Analysis</div>
+    <div class="skill-tag">Banking Operations</div>
+    <div class="skill-tag">Insurance Advisory</div>
+    <div class="skill-tag">Risk Profiling</div>
+    <div class="skill-tag">Business Growth Strategy</div>
+    <div class="skill-tag">Client Relationship Management</div>
+    <div class="skill-tag">Investment Planning</div>
+    <div class="skill-tag">MS Excel</div>
+    <div class="skill-tag">Analytical Thinking</div>
+    <div class="skill-tag">Team Leadership</div>
+  </div>
 </section>
 
-<section class="services">
-<h2 class="section-title">Advisory Focus</h2>
-<div class="card">
-<ul>
-<li>Investment Structuring Guidance</li>
-<li>Insurance Planning</li>
-<li>Risk Profiling & Asset Allocation</li>
-<li>Long-Term Financial Planning Strategy</li>
-</ul>
-</div>
-</section>
-
-<section>
-<h2 class="section-title">Insights (Coming Soon)</h2>
-<div class="card">
-<p>
-Forthcoming articles on macroeconomics, investment psychology, banking systems, financial independence frameworks, and risk strategy.
-</p>
-</div>
-</section>
-
-<section id="contact" class="contact">
-<h2>Contact</h2>
-<br>
-<p>Email: souvik.das39@yahoo.com</p>
-<p>Location: Kolkata, West Bengal</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/souvik-das-14a22b224" target="_blank">View Profile</a></p>
+<section id="contact">
+  <div class="section-label">Get In Touch</div>
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p>Feel free to reach out for professional inquiries, financial advisory discussions, or simply to connect.</p>
+      <a href="mailto:souvik.das39@yahoo.com" class="contact-item">
+        <div class="contact-icon">✉</div>
+        souvik.das39@yahoo.com
+      </a>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        Kolkata, West Bengal, India
+      </div>
+      <a href="https://www.linkedin.com/in/souvik-das-14a22b224" target="_blank" class="contact-item">
+        <div class="contact-icon">in</div>
+        LinkedIn Profile
+      </a>
+    </div>
+    <div>
+      <div class="form-row"><input type="text" placeholder="Your Name"></div>
+      <div class="form-row"><input type="email" placeholder="Your Email"></div>
+      <div class="form-row"><textarea rows="5" placeholder="Your Message"></textarea></div>
+      <button class="form-btn">Send Message</button>
+    </div>
+  </div>
 </section>
 
 <footer>
-© 2026 Souvik Das | souvik-advisory.netlify.app
+  © 2026 Souvik Das &nbsp;·&nbsp; souvik-advisory.netlify.app
 </footer>
 
 </body>
