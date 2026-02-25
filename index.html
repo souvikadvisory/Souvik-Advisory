@@ -9,7 +9,6 @@
 * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
 body { font-family:'Open Sans',sans-serif; font-weight:300; color:#222; background:#fff; line-height:1.7; }
 
-/* NAV */
 nav { background:#1a2744; padding:18px 8%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100; }
 .nav-brand { font-family:'Merriweather',serif; color:#fff; font-size:18px; font-weight:400; }
 .nav-links { display:flex; gap:28px; list-style:none; }
@@ -17,7 +16,6 @@ nav { background:#1a2744; padding:18px 8%; display:flex; justify-content:space-b
 .nav-links a:hover { color:#fff; }
 .gold-bar { height:3px; background:linear-gradient(90deg,#c8a84b,#e8d090,#c8a84b); }
 
-/* HERO */
 .hero { background:#1a2744; color:#fff; padding:80px 8%; display:flex; align-items:center; gap:60px; }
 .hero-photo { width:160px; height:190px; flex-shrink:0; background:#243460; border:2px solid #c8a84b; display:flex; align-items:center; justify-content:center; font-family:'Merriweather',serif; font-size:38px; color:#c8a84b; overflow:hidden; }
 .hero-photo img { width:100%; height:100%; object-fit:cover; object-position:top; }
@@ -30,20 +28,17 @@ nav { background:#1a2744; padding:18px 8%; display:flex; justify-content:space-b
 .hero-btn { display:inline-block; padding:12px 28px; background:#c8a84b; color:#1a2744; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border:none; cursor:pointer; transition:background 0.2s; }
 .hero-btn:hover { background:#dbbe6a; }
 
-/* SECTIONS */
 section { padding:70px 8%; }
 section:nth-child(even) { background:#f7f9fc; }
 .section-label { font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:#c8a84b; margin-bottom:8px; }
 .section-title { font-family:'Merriweather',serif; font-size:28px; font-weight:400; color:#1a2744; margin-bottom:40px; padding-bottom:16px; border-bottom:2px solid #1a2744; }
 
-/* ABOUT */
 .about-text p { font-size:15px; color:#444; line-height:1.9; margin-bottom:16px; max-width:780px; }
 .about-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:32px; }
 .acard { background:#fff; border:1px solid #e0e8f0; border-left:3px solid #1a2744; padding:18px 20px; }
 .acard h4 { font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#1a2744; margin-bottom:6px; }
 .acard p { font-size:13px; color:#555; line-height:1.6; }
 
-/* EXPERIENCE */
 .exp-item { display:grid; grid-template-columns:210px 1fr; gap:40px; padding:32px 0; border-bottom:1px solid #e8e8f0; }
 .exp-item:last-child { border-bottom:none; }
 .exp-period { font-size:12px; color:#c8a84b; font-weight:600; margin-bottom:4px; }
@@ -53,12 +48,10 @@ section:nth-child(even) { background:#f7f9fc; }
 .exp-points li { font-size:14px; color:#555; padding-left:16px; position:relative; line-height:1.6; }
 .exp-points li::before { content:'▸'; position:absolute; left:0; color:#c8a84b; font-size:10px; top:4px; }
 
-/* SKILLS */
 .skills-wrap { display:flex; flex-wrap:wrap; gap:10px; }
-.skill-tag { padding:10px 20px; background:#fff; border:1px solid #d0d8e8; color:#333; font-size:13px; font-weight:400; transition:all 0.2s; }
+.skill-tag { padding:10px 20px; background:#fff; border:1px solid #d0d8e8; color:#333; font-size:13px; transition:all 0.2s; }
 .skill-tag:hover { border-color:#c8a84b; color:#1a2744; background:#fdf8ee; }
 
-/* BLOG */
 #insights { background:#f7f9fc; }
 .blog-filter { display:flex; flex-wrap:wrap; margin-bottom:32px; border-bottom:1px solid #e0e8f0; }
 .bf-btn { padding:12px 20px; border:none; background:none; font-family:'Open Sans',sans-serif; font-size:13px; color:#888; cursor:pointer; border-bottom:2px solid transparent; transition:color 0.2s,border-color 0.2s; white-space:nowrap; }
@@ -85,8 +78,8 @@ section:nth-child(even) { background:#f7f9fc; }
 .blog-empty { grid-column:1/-1; text-align:center; padding:60px 20px; }
 .blog-empty h3 { font-family:'Merriweather',serif; font-size:20px; color:#ccc; margin-bottom:10px; }
 .blog-empty p { font-size:14px; color:#bbb; }
+.blog-loading { grid-column:1/-1; text-align:center; padding:60px 20px; color:#999; font-size:14px; }
 
-/* CONTACT */
 .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
 .contact-info p { color:#555; font-size:15px; margin-bottom:28px; line-height:1.8; }
 .citem { display:flex; align-items:center; gap:14px; margin-bottom:18px; font-size:14px; color:#444; text-decoration:none; transition:color 0.2s; }
@@ -102,11 +95,9 @@ section:nth-child(even) { background:#f7f9fc; }
 footer { background:#1a2744; color:rgba(255,255,255,0.5); text-align:center; padding:24px 8%; font-size:13px; }
 footer span { color:rgba(255,255,255,0.8); }
 
-/* ADMIN FAB */
 .admin-fab { position:fixed; bottom:28px; right:28px; background:#1a2744; color:#c8a84b; border:none; width:52px; height:52px; border-radius:50%; font-size:22px; cursor:pointer; box-shadow:0 4px 18px rgba(26,39,68,0.45); z-index:300; display:flex; align-items:center; justify-content:center; transition:background 0.2s,transform 0.2s; }
 .admin-fab:hover { background:#243460; transform:scale(1.08); }
 
-/* OVERLAYS */
 .overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:400; align-items:center; justify-content:center; padding:20px; }
 .overlay.open { display:flex; }
 .modal { background:#fff; width:100%; max-width:560px; max-height:90vh; overflow-y:auto; border-top:4px solid #1a2744; }
@@ -126,6 +117,7 @@ footer span { color:rgba(255,255,255,0.8); }
 .errmsg { font-size:13px; color:#c0392b; margin-bottom:10px; text-align:center; display:none; }
 .btn-pub { width:100%; padding:13px; background:#1a2744; color:#fff; border:none; font-family:'Open Sans',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.08em; cursor:pointer; transition:background 0.2s; margin-top:6px; }
 .btn-pub:hover { background:#c8a84b; color:#1a2744; }
+.btn-pub:disabled { background:#999; cursor:not-allowed; }
 
 .post-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:500; overflow-y:auto; padding:24px; }
 .post-overlay.open { display:block; }
@@ -267,7 +259,9 @@ footer span { color:rgba(255,255,255,0.8); }
     <button class="bf-btn" onclick="setFilter('Insurance',this)">Insurance</button>
     <button class="bf-btn" onclick="setFilter('Finance',this)">Finance</button>
   </div>
-  <div class="blog-grid" id="blogGrid"></div>
+  <div class="blog-grid" id="blogGrid">
+    <div class="blog-loading">Loading articles…</div>
+  </div>
 </section>
 
 <section id="contact">
@@ -276,7 +270,7 @@ footer span { color:rgba(255,255,255,0.8); }
   <div class="contact-grid">
     <div class="contact-info">
       <p>Feel free to reach out for professional inquiries, financial advisory discussions, or simply to connect.</p>
-      <a href="/cdn-cgi/l/email-protection#d2a1bda7a4bbb9fcb6b3a1e1eb92abb3babdbdfcb1bdbf" class="citem"><div class="cicon">✉</div><span class="__cf_email__" data-cfemail="bccfd3c9cad5d792d8ddcf8f85fcc5ddd4d3d392dfd3d1">[email&#160;protected]</span></a>
+      <a href="mailto:souvik.das39@yahoo.com" class="citem"><div class="cicon">✉</div>souvik.das39@yahoo.com</a>
       <div class="citem"><div class="cicon">📍</div>Kolkata, West Bengal, India</div>
       <a href="https://www.linkedin.com/in/souvik-das-14a22b224" target="_blank" class="citem"><div class="cicon">in</div>LinkedIn Profile</a>
     </div>
@@ -289,7 +283,7 @@ footer span { color:rgba(255,255,255,0.8); }
   </div>
 </section>
 
-<footer>© 2026 <span>Souvik Das</span> · Finance Professional · Kolkata · souvik-advisory.netlify.app</footer>
+<footer>© 2026 <span>Souvik Das</span> · Finance Professional · Kolkata · souvikadvisory.github.io</footer>
 
 <button class="admin-fab" onclick="openAdmin()" title="Write Article">✎</button>
 
@@ -337,4 +331,5 @@ footer span { color:rgba(255,255,255,0.8); }
           <textarea id="fExcerpt" rows="3" placeholder="2–3 sentence summary shown on the listing…"></textarea>
         </div>
         <div class="field">
-          <label>Fu
+          <label>Full Article *</label>
+          <textarea id="fContent" rows="10" placeholder=
