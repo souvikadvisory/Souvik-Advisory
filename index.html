@@ -1,232 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shape Uup | Finance · Career · Counselling · Training</title>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --G1:#0b3d2e;
-  --G2:#0f6a4f;
-  --G3:#16a34a;
-  --G4:#5eead4;
-  --G5:#e6f9f0;
-  --G6:#f5fdf9;
-  --GOLD:#c6a75e;
-  --INK:#0b1f17;
-
-  --fH:'DM Serif Display',serif;
-  --fB:'Inter',sans-serif;
-  --fNum:'Cormorant Garamond',serif;
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:var(--fB);
-  background:var(--G6);
-  color:var(--INK);
-  line-height:1.7;
-  animation:fadeIn 1s ease;
-}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
-nav{
-  position:fixed;top:0;left:0;right:0;
-  padding:20px 60px;
-  display:flex;justify-content:space-between;align-items:center;
-  background:rgba(255,255,255,0.65);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--G4);
-  z-index:1000;
-}
-nav h1{font-family:var(--fH);font-size:1.5rem}
-nav a{margin-left:30px;text-decoration:none;color:var(--INK);font-weight:600}
-nav a:hover{color:var(--G2)}
-
-.hero{
-  min-height:100vh;
-  display:flex;flex-direction:column;
-  justify-content:center;align-items:center;
-  text-align:center;
-  padding:120px 20px 40px;
-}
-.hero h2{
-  font-family:var(--fH);
-  font-size:3rem;
-  margin-bottom:20px;
-}
-.hero p{
-  max-width:600px;
-  margin-bottom:40px;
-  color:#334;
-}
-.btn{
-  padding:14px 30px;
-  background:var(--G1);
-  color:#fff;
-  border-radius:40px;
-  border:1px solid var(--GOLD);
-  text-decoration:none;
-  transition:all .3s ease;
-}
-.btn:hover{
-  background:var(--G2);
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-  transform:translateY(-3px);
-}
-
-.stats{
-  display:flex;
-  justify-content:center;
-  gap:80px;
-  padding:80px 20px;
-  background:#fff;
-}
-.stat{text-align:center}
-.stat h3{
-  font-family:var(--fNum);
-  font-size:3rem;
-  margin-bottom:5px;
-}
-.section{
-  padding:100px 20px;
-  max-width:1100px;
-  margin:auto;
-}
-.section h2{
-  font-family:var(--fH);
-  font-size:2.2rem;
-  margin-bottom:20px;
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-  margin-top:40px;
-}
-.card{
-  background:#fff;
-  padding:40px;
-  border-radius:20px;
-  border:1px solid var(--G4);
-  transition:all .4s ease;
-}
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 20px 50px rgba(0,0,0,0.1);
-}
-footer{
-  background:var(--G1);
-  color:#fff;
-  padding:40px;
-  text-align:center;
-}
-
-/* Scroll reveal */
-.reveal{opacity:0;transform:translateY(40px);transition:all .8s ease}
-.reveal.active{opacity:1;transform:translateY(0)}
-</style>
-</head>
-
-<body>
-
-<nav>
-  <h1>Shape Uup</h1>
-  <div>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <h2>Grow Smarter. Plan Better. Succeed Faster.</h2>
-  <p>Professional consultancy in Finance, Career, Counselling & Training designed for long-term success and authentic growth.</p>
-  <a href="#contact" class="btn">Book Consultation</a>
-</section>
-
-<section class="stats">
-  <div class="stat">
-    <h3 class="counter" data-target="500">0</h3>
-    <p>Clients Guided</p>
-  </div>
-  <div class="stat">
-    <h3 class="counter" data-target="28">0</h3>
-    <p>Years Experience</p>
-  </div>
-  <div class="stat">
-    <h3 class="counter" data-target="98">0</h3>
-    <p>Satisfaction %</p>
-  </div>
-</section>
-
-<section id="about" class="section reveal">
-  <h2>About Shape Uup</h2>
-  <p>Shape Uup is built on clarity, integrity and practical execution. We focus on real-world strategies, measurable outcomes and sustainable growth — not hype.</p>
-</section>
-
-<section id="services" class="section reveal">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Finance Planning</h3>
-      <p>Smart investment strategy, budgeting and wealth structuring for business owners.</p>
-    </div>
-    <div class="card">
-      <h3>Career Guidance</h3>
-      <p>Structured roadmaps and growth clarity for ambitious professionals.</p>
-    </div>
-    <div class="card">
-      <h3>Counselling</h3>
-      <p>Confidential sessions focused on mental clarity and strategic decision making.</p>
-    </div>
-    <div class="card">
-      <h3>Training Programs</h3>
-      <p>Skill-building workshops designed for modern competitive environments.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="section reveal">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>Phone: +91 00000 00000</p>
-</section>
-
-<footer>
-  © 2026 Shape Uup. All rights reserved.
-</footer>
-
 <script>
-/* Scroll reveal */
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
-    }
-  });
-},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.addEventListener("DOMContentLoaded", () => {
 
-/* Counter animation */
-document.querySelectorAll('.counter').forEach(counter=>{
-  const update=()=>{
-    const target=+counter.getAttribute('data-target');
-    const count=+counter.innerText;
-    const inc=target/100;
-    if(count<target){
-      counter.innerText=Math.ceil(count+inc);
-      setTimeout(update,20);
-    }else{
-      counter.innerText=target+"+";
-    }
-  };
-  update();
+  /* ===============================
+     1. Custom Cursor
+  =============================== */
+  const cursor = document.createElement("div");
+  cursor.classList.add("cursor");
+  document.body.appendChild(cursor);
+
+  document.addEventListener("mousemove", e => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => cursor.classList.add("big"));
+    el.addEventListener("mouseleave", () => cursor.classList.remove("big"));
+  });
+
+  /* ===============================
+     2. Navbar Scroll Effect
+  =============================== */
+  const nav = document.querySelector("nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 40);
+  });
+
+  /* ===============================
+     3. Mobile Menu
+  =============================== */
+  const hamburger = document.querySelector(".hamburger");
+  const mob = document.querySelector(".mob");
+
+  if (hamburger && mob) {
+    hamburger.addEventListener("click", () => {
+      mob.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".mob a").forEach(link => {
+      link.addEventListener("click", () => mob.classList.remove("open"));
+    });
+  }
+
+  /* ===============================
+     4. Scroll Reveal
+  =============================== */
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  /* ===============================
+     5. Animated Counters
+  =============================== */
+  const counters = document.querySelectorAll("[data-count]");
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const el = entry.target;
+      const target = +el.dataset.count;
+      let current = 0;
+      const increment = target / 80;
+
+      const update = () => {
+        current += increment;
+        if (current < target) {
+          el.innerText = Math.floor(current);
+          requestAnimationFrame(update);
+        } else {
+          el.innerText = target + "+";
+        }
+      };
+
+      update();
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+
+  counters.forEach(counter => counterObserver.observe(counter));
+
+  /* ===============================
+     6. Active Nav Highlight
+  =============================== */
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+  /* ===============================
+     7. WhatsApp Direct Connect
+  =============================== */
+  const phone = "919007638262";
+  const waLinks = document.querySelectorAll("[data-wa]");
+
+  waLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const message = link.dataset.wa || "Hello, I would like to connect regarding your services.";
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    });
+  });
+
+  /* ===============================
+     8. Contact Form (Email Fallback)
+  =============================== */
+  const form = document.querySelector("#contact-form");
+
+  if (form) {
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+
+      const name = form.querySelector("[name='name']").value.trim();
+      const email = form.querySelector("[name='email']").value.trim();
+      const message = form.querySelector("[name='message']").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill all required fields.");
+        return;
+      }
+
+      const subject = `Website Inquiry from ${name}`;
+      const body = `Name: ${name}%0AEmail: ${email}%0AMessage:%0A${message}`;
+
+      window.location.href = `mailto:maiti.uk@yahoo.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    });
+  }
+
 });
 </script>
-
-</body>
-</html>
