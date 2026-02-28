@@ -1,192 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Maaiti Legal & Elite Consultancy | Professional Excellence</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shape Uup | Finance • Career • Counseling • Training</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  /* PREMIUM GREEN PALETTE */
-  --legal-deep: #0a1f16;    /* Deep Forest Green - Background */
-  --legal-green: #143628;   /* British Racing Green - Sections */
-  --legal-accent: #1e4d3a;  /* Lighter Green - Highlights */
-  
-  /* CHAMPAGNE GOLD & IVORY */
-  --gold: #d4af37;          /* Classic Metallic Gold */
-  --gold-light: #f1e5ac;    /* Soft Champagne */
-  --ivory: #f9f7f2;         /* Text on Light */
-  --text-silver: #e0e0e0;   /* Professional Alpha/Numerics */
-  
-  /* FONTS */
-  --serif: 'Playfair Display', serif;
-  --sans: 'Montserrat', sans-serif;
+  --deep-green: #0B3D2E;
+  --rich-green: #145A32;
+  --light-sage: #EAF4EF;
+  --gold: #C6A85E;
+  --dark: #1C1C1C;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-body { 
-    background-color: var(--legal-deep); 
-    color: var(--text-silver); 
-    font-family: var(--sans); 
-    line-height: 1.6;
-    overflow-x: hidden;
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
 }
 
-/* CUSTOM INTERACTIVE CURSOR */
-.cursor-dot {
-    width: 8px; height: 8px; background: var(--gold);
-    position: fixed; border-radius: 50%; pointer-events: none;
-    z-index: 9999; transition: transform 0.1s ease;
+body {
+  background: var(--light-sage);
+  color: var(--dark);
+  scroll-behavior:smooth;
 }
 
-/* ANIMATIONS */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+header {
+  background: var(--deep-green);
+  color: white;
+  padding: 20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-@keyframes goldShimmer {
-    0% { background-position: -200% center; }
-    100% { background-position: 200% center; }
+.logo {
+  font-family:'Playfair Display', serif;
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:1px;
 }
 
-.reveal { opacity: 0; transition: all 1s ease-out; }
-.reveal.active { opacity: 1; transform: translateY(0); }
-
-/* HERO SECTION */
-#hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: radial-gradient(circle at center, var(--legal-green), var(--legal-deep));
-    position: relative;
+nav a {
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+  transition:0.3s;
 }
 
-.hero-content h1 {
-    font-family: var(--serif);
-    font-size: clamp(3rem, 8vw, 6rem);
-    color: var(--gold-light);
-    margin-bottom: 20px;
-    animation: fadeInUp 1.2s ease;
+nav a:hover {
+  color: var(--gold);
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--gold);
-    animation: fadeInUp 1.5s ease;
+.hero {
+  background: linear-gradient(135deg, var(--deep-green), var(--rich-green));
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+  animation: fadeIn 1.2s ease;
 }
 
-/* LUXURY CARDS */
-.service-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    padding: 40px;
-    backdrop-filter: blur(10px);
-    transition: 0.5s;
+.hero h1 {
+  font-family:'Playfair Display', serif;
+  font-size:48px;
+  margin-bottom:20px;
 }
 
-.service-card:hover {
-    background: var(--legal-accent);
-    transform: translateY(-10px);
-    border-color: var(--gold);
+.hero p {
+  font-size:18px;
+  margin-bottom:30px;
 }
 
-.numeral {
-    font-family: var(--sans);
-    font-size: 4rem;
-    font-weight: 700;
-    opacity: 0.1;
-    color: var(--gold);
+.btn {
+  padding:12px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  margin:10px;
+  transition:0.4s;
+  display:inline-block;
 }
 
-/* BUTTONS */
-.btn-premium {
-    padding: 15px 40px;
-    border: 1px solid var(--gold);
-    background: transparent;
-    color: var(--gold);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: 0.4s;
+.gold-btn {
+  background: var(--gold);
+  color:black;
 }
 
-.btn-premium:hover {
-    background: var(--gold);
-    color: var(--legal-deep);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+.gold-btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.outline-btn {
+  border:2px solid white;
+  color:white;
+}
+
+.outline-btn:hover {
+  background:white;
+  color:var(--deep-green);
+}
+
+section {
+  padding:80px 8%;
+}
+
+.section-title {
+  font-family:'Playfair Display', serif;
+  font-size:36px;
+  margin-bottom:40px;
+  text-align:center;
+  position:relative;
+}
+
+.services {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:30px;
+}
+
+.card {
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.card:hover {
+  transform:translateY(-10px);
+  border:1px solid var(--gold);
+}
+
+.card h3 {
+  margin-bottom:15px;
+  color:var(--deep-green);
+}
+
+.legal {
+  background:white;
+  border-left:5px solid var(--gold);
+  padding:30px;
+  border-radius:10px;
+}
+
+.counter-section {
+  background: var(--deep-green);
+  color:white;
+  text-align:center;
+}
+
+.counter {
+  font-size:40px;
+  font-weight:600;
+  font-variant-numeric: tabular-nums;
+}
+
+footer {
+  background:var(--deep-green);
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+footer a {
+  color:var(--gold);
+  text-decoration:none;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+@media(max-width:768px){
+  .hero h1 {font-size:32px;}
 }
 </style>
 </head>
+
 <body>
 
-<div class="cursor-dot"></div>
+<header>
+  <div class="logo">Shape Uup</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#legal">Legal</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<nav style="position:fixed; width:100%; padding:30px 50px; display:flex; justify-content:space-between; z-index:100;">
-    <div style="font-family:var(--serif); font-size:1.5rem; color:var(--gold);">MAAITI LEGAL</div>
-    <div style="display:flex; gap:30px; font-size:0.8rem; letter-spacing:2px;">
-        <span>SERVICES</span>
-        <span>PRACTICE AREAS</span>
-        <span>CONSULTATION</span>
-    </div>
-</nav>
-
-<section id="hero">
-    <div class="hero-content">
-        <p>Integrity • Excellence • Results</p>
-        <h1>Legal Artistry.</h1>
-        <button class="btn-premium">Secure Counsel</button>
-    </div>
+<section class="hero">
+  <h1>Structuring Growth with Precision & Purpose</h1>
+  <p>Professional Guidance in Finance, Career Development, Counseling & Training</p>
+  <a href="#contact" class="btn gold-btn">Book Consultation</a>
+  <a href="#services" class="btn outline-btn">Explore Services</a>
 </section>
 
-<section style="padding:100px 50px;">
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:30px;">
-        <div class="service-card reveal">
-            <div class="numeral">01</div>
-            <h3 style="font-family:var(--serif); font-size:1.8rem; color:var(--gold-light);">Corporate Law</h3>
-            <p>Structuring elite enterprises with precision and legal foresight.</p>
-        </div>
-        <div class="service-card reveal">
-            <div class="numeral">02</div>
-            <h3 style="font-family:var(--serif); font-size:1.8rem; color:var(--gold-light);">Financial Strategy</h3>
-            <p>Elite asset protection and wealth management consultancy.</p>
-        </div>
-        <div class="service-card reveal">
-            <div class="numeral">03</div>
-            <h3 style="font-family:var(--serif); font-size:1.8rem; color:var(--gold-light);">Crisis Management</h3>
-            <p>High-stakes negotiation and tactical legal defense.</p>
-        </div>
-    </div>
+<section id="about">
+  <h2 class="section-title">About Shape Uup</h2>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    Founded by <strong>Utpaal Kumaar Maaiti</strong>, Shape Uup delivers structured financial advisory,
+    career strategy, professional counseling and advanced training solutions
+    designed with integrity, confidentiality and precision.
+  </p>
 </section>
+
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Finance</h3>
+      <p>Financial planning, investment structuring, wealth advisory solutions.</p>
+    </div>
+    <div class="card">
+      <h3>Career</h3>
+      <p>Career roadmap development, interview strategy and profile building.</p>
+    </div>
+    <div class="card">
+      <h3>Counseling</h3>
+      <p>Professional and personal development guidance with confidentiality.</p>
+    </div>
+    <div class="card">
+      <h3>Training</h3>
+      <p>Corporate training, skill enhancement and executive workshops.</p>
+    </div>
+  </div>
+</section>
+
+<section class="counter-section">
+  <h2 class="section-title">Our Impact</h2>
+  <div class="counter" id="clients">0</div>
+  <p>Clients Guided Professionally</p>
+</section>
+
+<section id="legal">
+  <h2 class="section-title">Legal & Compliance</h2>
+  <div class="legal">
+    <p>Shape Uup operates with strict data protection protocols and client confidentiality standards.
+    All consultations are conducted under professional ethical frameworks.
+    Privacy Policy and Terms & Conditions apply to all services provided.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <p style="text-align:center;">For consultations and professional inquiries.</p>
+  <p style="text-align:center; margin-top:10px;"><strong>Email:</strong> info@shapeuup.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Shape Uup. All Rights Reserved.</p>
+</footer>
 
 <script>
-// Smooth Scroll Reveal
-window.addEventListener('scroll', () => {
-    const reveals = document.querySelectorAll('.reveal');
-    reveals.forEach(el => {
-        let windowHeight = window.innerHeight;
-        let revealTop = el.getBoundingClientRect().top;
-        if (revealTop < windowHeight - 100) {
-            el.classList.add('active');
-        }
-    });
-});
+let count = 0;
+let target = 250;
+let counter = document.getElementById("clients");
 
-// Cursor Follower
-const dot = document.querySelector('.cursor-dot');
-document.addEventListener('mousemove', (e) => {
-    dot.style.left = e.clientX + 'px';
-    dot.style.top = e.clientY + 'px';
-});
+let interval = setInterval(() => {
+  if(count >= target){
+    clearInterval(interval);
+  } else {
+    count++;
+    counter.innerText = count;
+  }
+}, 10);
 </script>
 
 </body>
